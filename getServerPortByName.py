@@ -9,6 +9,7 @@ tree = ET.parse(domainhome+'/config/config.xml')
 ns = {'domain': 'http://xmlns.oracle.com/weblogic/domain'}
 
 root = tree.getroot()
+lport = ""
 
 for country in root.findall('domain:server',ns):
         name = country.find('domain:name', ns)
